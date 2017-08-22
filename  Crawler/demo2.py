@@ -3,3 +3,4 @@ from bs4 import BeautifulSoup
 html = urlopen("http://www.pythonscraping.com/pages/page1.html")
 bsObj = BeautifulSoup(html.read(), "html.parser")
 print(bsObj.h1)
+'''It seems that I need the html.parser to get rid of the warning.'''
