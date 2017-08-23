@@ -5,5 +5,9 @@ bsObj = BeautifulSoup(html, 'html5lib')
 for child in bsObj.find('table', {'id':'giftList'}).children:
 	print(child)
 print('*************')
-for sibing in bsObj.find('table', {'id':'giftList'}).tr.children:
-	print(sibing)
+for sibling in bsObj.find('table', {'id':'giftList'}).tr.next_siblings:
+	print(sibling)
+print('*************')
+for sibling in bsObj.find('table', {'id':'giftList'}).tr.previous_siblings:
+	print(sibling)
+print('*************')
