@@ -2,12 +2,13 @@ counts = dict()
 try:
 	f = open('romeo.txt', 'r')
 	for line in f:
-		if line.startswith('From'):
-			words = line.split()
-			if words[3] in counts:
-				counts[words[3]] += 1
+		words = line.split()
+		if len(words) == 0 or words[0] != 'From': continue
+		else:
+			if words[2] in counts:
+				counts[words[2]] += 1
 			else:
-				counts[words[3]] = 1
+				counts[words[2]] = 1
 except:
 	print('File Not Found!')
 	exit()
