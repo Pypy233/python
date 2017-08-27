@@ -26,3 +26,4 @@ bbbbb  b occurs five times.
 ^:	Match character after ^.
 $:	Match the end.
 ?1:	Not contains.
+.:	Matches any single character.
