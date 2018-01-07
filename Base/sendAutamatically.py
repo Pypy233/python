@@ -6,3 +6,4 @@ def text_reply(msg):
 
 itchat.auto_login()
 itchat.run()
+#Ought to be updated to avoid my son pjj playing a trick
