@@ -1,5 +1,4 @@
 # python
 Base of python.
-Some simple code.
-Include three books: HeadFirst Python, Basic Course of Python, Fluent Python.
-The official document is also included.
+Some example code in three books: HeadFirst Python, Basic Course of Python, Fluent Python.
+Some practical crawler tools, combined with data analysis and machine learning.
