@@ -19,8 +19,10 @@ class QQZoneTool():
         try:
             driver.find_element_by_css_selector('#img_out_' + self.user).click()
             print('Image login...')
+            time.sleep(5)  # 添加等待
+            return driver
         except:
-            print('Fail to login by image...')
+            print('Fail to image login...')
 
         try:
             driver.find_element_by_id('login_div')
@@ -41,13 +43,11 @@ class QQZoneTool():
     def access_friend_zone(self, friend_qq):
         driver = self.login()
         try:
-            accept = driver.get('http://user.qzone.qq.com/' + friend_qq + '/311'.format(friend_qq))
-            accept = True
+            driver.get('http://user.qzone.qq.com/' + friend_qq + '/311'.format(friend_qq))
+            time.sleep(5)  # 必要的等待
+            driver.switch_to.frame('app_canvas_frame')
         except:
-            accept = False
             print('Fail to accept access to qq zone...')
-        driver.switch_to.frame('app_canvas_frame')
-        time.sleep(3)  # 必要的等待
         return driver
 
     # 参考洲神的代码，emmm没有考虑翻页，过几天完善
@@ -66,12 +66,14 @@ class QQZoneTool():
         driver.quit()
 
     # 点赞狂魔，emmm可能会被打
-    def like_friend(self, friend_qq):
+    def praise_friend(self, friend_qq):
         driver = self.access_friend_zone(friend_qq)
-        time.sleep(2)
-        driver.find_elements_by_xpath('./div[3]/div[1]/p/a[3]')
+        praise_icon_list = driver.find_element_by_css_selector('.item qz_like_btn_v3 ').click()
 
-        driver.close()
-        driver.quit()
+    def get_comment(self, friend_qq):
+        driver = self.access_friend_zone(friend_qq)
+        driver.switch_to.frame('QM_Feeds_Iframe')
+        comment_list = driver.find_elements_by_css_selector('#like_btn_')
+        print(comment_list)
 
 
