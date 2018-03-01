@@ -3,7 +3,7 @@ import time
 
 
 class BaiduTool:
-    def __init__(self, url = 'http://baidu.com'):
+    def __init__(self, url='http://baidu.com'):
         driver = webdriver.Chrome()
         driver.get(url)
         self.driver = driver

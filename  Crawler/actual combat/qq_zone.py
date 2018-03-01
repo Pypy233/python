@@ -77,3 +77,6 @@ class QQZoneTool():
         print(comment_list)
 
 
+tool = QQZoneTool('2529716798', '1212hjklhjklhjkl')
+tool.praise_friend('303025973')
+
