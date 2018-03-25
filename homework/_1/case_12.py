@@ -6,5 +6,5 @@ class Solution():
         b = 21.015
         avg = (a + b) / 2
         df = a + b - 2 * avg
-        sd = 1.105 * 6 / 2.03
+        sd = 1.015 * 6 / 2.03
         return [avg, floor(sd)]
