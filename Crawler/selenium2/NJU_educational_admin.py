@@ -4,7 +4,7 @@ from PIL import Image, ImageEnhance
 import pytesseract as pyt
 
 
-# 进入南京大学教务处看成绩...近几天有个烦人的核查信息，注意点击确认后才可进一步核查（5s内完成否则抱异常），顺利自动跳转成绩页面
+# 进入南京大学教务处看成绩...近几天有个烦人的核查信息，注意点击确认后才可进一步核查（5s内完成否则报异常），顺利自动跳转成绩页面
 picture_path = 'pictures/code_picture.png'
 code_path = 'pictures/code.png'
 
