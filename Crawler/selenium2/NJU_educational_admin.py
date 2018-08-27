@@ -54,6 +54,6 @@ class NJUTool:
         return code
 
 
-tool = NJUTool('161250096', '1212Hjkl')
+tool = NJUTool('1612500xx', 'xxxxxx')
 tool.login()
 tool.check_grade()
